@@ -5,3 +5,6 @@ HOW TO USE
 SCRIPTS 
   1. Read sentences.json.txt and load sentences into firestore:  run "npm load" 
   2. Top 100 words in all sentences: run "npm top"
+
+HEROKU
+  https://test-ejs-firestore.herokuapp.com/
