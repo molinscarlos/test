@@ -3,5 +3,5 @@ HOW TO USE
   2. Run "npm run" 3. Open localhost:8080
 
 SCRIPTS 
-  1. read sentences.json.txt and load sentences into firestore:  run "npm load" 
-  2.top 100 words in all sentences: run "npm top"
+  1. Read sentences.json.txt and load sentences into firestore:  run "npm load" 
+  2. Top 100 words in all sentences: run "npm top"
