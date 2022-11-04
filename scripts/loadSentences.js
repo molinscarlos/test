@@ -8,7 +8,7 @@ fb.initializeApp({
 
 (async () => {
   console.log('\x1b[32m reading json document... \x1b[0m');
-  const content = fs.readFileSync('sentences.jsonl1.txt', {
+  const content = fs.readFileSync('sentences.jsonl.txt', {
     encoding: 'utf8',
     flag: 'r',
   });
