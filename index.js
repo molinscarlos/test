@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const sentencesController = require('./controllers/controller.sentences');
 const viewController = require('./controllers/controller.view');
 const firebase = require('firebase-admin');
