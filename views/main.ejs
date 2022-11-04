@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Front test</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Text</th>
+          <th>Categories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const s of sentences) { %>
+        <tr>
+          <td><a href="/view/sentence/<%=s.id%>"><%= s.text %></a></td>
+          <td>
+            <a href="/view/sentence/<%=s.id%>"><%= s.cats.join(", ") %></a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <div style="display: inline-block">
+      <% for (let index = 0; index < pages; index++) { %>
+      <a
+        href="/<%=index + 1%>"
+        style="color: black; float: left; padding: 8px 16px"
+        value="<%= index +
+        1 %>"
+      >
+        <%= index + 1 %>
+      </a>
+      <% } %>
+    </div>
+    <br />
+    <h3><a href="/view/sentence"> Create sentence</a></h3>
+  </body>
+</html>
+
+<style>
+  table,
+  td,
+  th {
+    border: 1px solid black;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>

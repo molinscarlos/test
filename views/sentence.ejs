@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Front test</title>
+  </head>
+  <body>
+    <form action="/add/sentence" method="post">
+      <% if(sentence.id) { %>
+      <input
+        type="hidden"
+        id="sentence_id"
+        name="sentence_id"
+        value="<%=sentence.id%>"
+      />
+      <% } %>
+      <label for="sentence_text">Text:</label><br />
+      <input
+        style="width: 50%"
+        type="text"
+        id="sentence_text"
+        name="sentence_text"
+        value="<%=sentence.text%>"
+      /><br />
+      <% for (const cat of cats) { if(sentence.cats.includes(cat)) { %>
+      <input
+        type="checkbox"
+        id="<%=cat%>"
+        name="<%=cat%>"
+        value="<%=cat%>"
+        checked
+      />
+      <% } else { %>
+      <input type="checkbox" id="<%=cat%>" name="<%=cat%>" value="<%=cat%>" />
+      <% } %>
+      <label for="<%=cat%>"><%=cat%></label><br />
+      <%}%>
+      <input type="submit" value="Submit" />
+    </form>
+    <% if(sentence.id) { %>
+    <h3><a href="/delete/sentence/<%=sentence.id%>">Delete sentence</a></h3>
+    <% } %>
+  </body>
+</html>
+
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
